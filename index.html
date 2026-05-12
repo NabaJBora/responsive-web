@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image:linear-gradient(90deg,#1ed7b554,#f0f9a775), url(background.jpg);
+        }
+
+        .container{
+            width: 80%;
+            height: 80%;
+            /* background-color: black; */
+            display: grid;
+            grid-template-columns: 1fr 0.5fr 0.5fr;
+            grid-template-rows: 1fr 1fr;
+
+            grid-template-areas:
+                                " one two three"
+                                " one four five"
+
+            
+            ;
+
+
+            row-gap: 8px;
+            column-gap: 10px;
+
+        }
+
+
+
+        @media screen and (max-width:768px)
+        {
+           
+            
+        
+        .container{
+            width: 90%;
+            height: 100%;
+            /* background-color: black; */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr 0.5fr;
+
+            grid-template-areas:
+                                " one one"
+                                " two three"
+                                "four five"
+
+            
+            ;
+
+
+            row-gap: 8px;
+            column-gap: 10px;
+
+
+    
+        }
+    }
+
+
+    @media screen and (max-width:576px)
+        {
+           
+        
+        .container{
+            width: 100%;
+            height: 100%;
+            /* background-color: black; */
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+
+            grid-template-areas:
+                                " one"
+                                " two"
+                                "three"
+                                "four"
+                                "five"
+
+            
+            ;
+
+
+            row-gap: 8px;
+            column-gap: 10px;
+
+
+    
+        }
+    }
+
+
+        .box{
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+        }
+
+        .box1{
+            grid-area: one;
+            overflow: hidden;
+        }
+
+        .box2{
+            grid-area: two;
+            overflow: hidden;
+        }
+
+        .box3{
+            grid-area: three;
+            overflow: hidden;
+        }
+
+        .box4{
+            grid-area: four;
+            overflow: hidden;
+        }
+
+        .box5{
+            grid-area: five;
+            overflow: hidden;
+        }
+
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    </style>
+
+
+<body>
+
+    <div class="wrapper">
+
+
+       
+
+
+        <div class="container">
+            <div class="box box1"><img src="luffy.jpg" alt=""></div>
+            <div class="box box2"><img src="zoro8.jpg" alt=""></div>
+            <div class="box box3"><img src="sanji2.jpg" alt=""></div>
+            <div class="box box4"><img src="nami2.jpg" alt=""></div>
+            <div class="box box5"><img src="ussop5.jpg" alt=""></div>
+
+
+
+        </div>
+    </div>
+    
+</body>
+</html>
